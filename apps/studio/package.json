@@ -7,18 +7,17 @@
     "dev": "sanity dev",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "lint": "eslint .",
+    "lint": "sanity schema validate",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sanity": "^3.68.0",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
-    "eslint": "^9.16.0",
     "typescript": "^5.7.2"
   }
 }

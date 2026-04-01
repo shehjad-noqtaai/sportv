@@ -47,11 +47,44 @@ export const sport = defineType({
       group: 'content',
     }),
     defineField({
+      name: 'history',
+      title: 'History',
+      type: 'localizedBlockContent',
+      group: 'content',
+    }),
+    defineField({
       name: 'hasTeams',
       title: 'Team-based Sport?',
       type: 'boolean',
       group: 'taxonomy',
       initialValue: true,
+    }),
+    defineField({
+      name: 'statFields',
+      title: 'Custom Stat Fields',
+      type: 'array',
+      group: 'taxonomy',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {name: 'key', type: 'string', title: 'Stat Key'},
+            {name: 'label', type: 'localizedString', title: 'Display Label'},
+            {
+              name: 'type',
+              type: 'string',
+              options: {list: ['number', 'percentage', 'ratio', 'text']},
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'productCategories',
+      title: 'Related Product Categories',
+      type: 'array',
+      group: 'taxonomy',
+      of: [{type: 'reference', to: [{type: 'productCategory'}]}],
     }),
     defineField({name: 'contentContext', type: 'contentContext', group: 'ai'}),
     defineField({name: 'seo', type: 'seo', group: 'seo'}),

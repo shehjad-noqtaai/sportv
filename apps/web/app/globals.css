@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Kinetic Stadium + PRD §6.4 — see repo DESIGN.md */
+:root {
+  --color-primary: #005bbf;
+  --color-primary-container: #1a73e8;
+  --color-secondary-cricket: #1b6d24;
+  --color-tertiary-esports: #6e24f5;
+  --color-surface: #ffffff;
+  --color-surface-container-low: #f8f7f4;
+  --color-surface-container-lowest: #f3f1ec;
+  --color-text: #191c1d;
+  --color-text-secondary: #5f6368;
+  --font-display: var(--font-plus-jakarta), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: #191c1d;
+    --color-surface-container-low: #1e2122;
+    --color-surface-container-lowest: #25292b;
+    --color-text: #e8eaed;
+    --color-text-secondary: #9aa0a6;
+  }
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-surface);
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* No harsh 1px section borders — use surface steps (DESIGN.md) */
+.section-surface {
+  background: var(--color-surface-container-low);
+}
+
+.card-surface {
+  background: var(--color-surface-container-lowest);
+}
+
+.kinetic-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-container));
+}
