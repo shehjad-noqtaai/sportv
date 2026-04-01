@@ -1,0 +1,13 @@
+{
+  "name": "sportverse",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "dev:web": "pnpm --filter web dev",
+    "dev:studio": "pnpm --filter studio dev",
+    "build": "pnpm run -r build",
+    "lint": "pnpm run -r lint",
+    "typecheck": "pnpm run -r typecheck"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#1b6d24",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#6e24f5",
+                        "on-tertiary-fixed-variant": "#5400cc",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "primary": "#005bbf",
+                        "on-background": "#191c1d",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-container": "#8652ff",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-container": "#217128",
+                        "background": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-low": "#f3f4f5",
+                        "outline": "#727785",
+                        "surface-tint": "#005bc0",
+                        "secondary-fixed-dim": "#88d982",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#22005d",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e9ddff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed": "#a3f69c",
+                        "surface-container": "#edeeef",
+                        "on-surface-variant": "#414754",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline-variant": "#c1c6d6",
+                        "tertiary-fixed-dim": "#cfbcff",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-dim": "#d9dadb",
+                        "primary-container": "#1a73e8",
+                        "secondary-container": "#a0f399",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#adc7ff",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Shell -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 h-16 w-full flex justify-between items-center px-6 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black italic tracking-tighter text-blue-700 dark:text-blue-400">SportVerse</span>
+<nav class="hidden md:flex gap-6 font-plus-jakarta text-sm tracking-tight font-bold">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300" href="#">Cricket</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300" href="#">Tennis</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 transition-all duration-300" href="#">E-sports</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300" href="#">Shop</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:block relative">
+<input class="bg-surface-container-high rounded-full px-4 py-1.5 text-sm outline-none focus:bg-surface-container-lowest transition-all duration-300 border-none w-48 focus:w-64" placeholder="Search gear..." type="text"/>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant transition-transform active:scale-90" data-icon="shopping_cart">shopping_cart</button>
+<button class="material-symbols-outlined text-on-surface-variant transition-transform active:scale-90" data-icon="account_circle">account_circle</button>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 py-8">
+<!-- Breadcrumb & Category Tag -->
+<div class="flex items-center gap-2 mb-6">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Premium Peripheral</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant text-xs">E-sports Shop</span>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface-variant text-xs font-semibold">Keyboards</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: High-end Product Gallery (7/12) -->
+<section class="lg:col-span-7 space-y-6">
+<div class="relative rounded-xl overflow-hidden bg-surface-container-low aspect-[4/3] group">
+<img alt="Kinetic Pro Keyboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="high-end mechanical keyboard with vibrant purple and blue RGB lighting on a dark desk with professional gaming setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAhfjQVDkzit3g7dhiP3X-IBy-_7v6C8lfeLdHEZgLLqrTEqUt0QDWhKibVstMMPnhLJL3wGdnmZ23aerBWXoz7xosNFVSSzF-iuq_RsbjTMQmLy2o6Fvfg6NHU2fEN1S878u-T8WBqzrYiE9sSui8Pwzkl6jnD98o0YT0NKJ-AQb01NGU3xJ7c7Oz2PX96Dz6TGnFpTjEpoeiXR5AFUPGeRW_YX7328LWw213rYu3AcOUsuWl6wqKMaHAHu3UB9yzusRGZ-guT7k"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="glass-panel text-tertiary px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="bolt">bolt</span>
+                            ULTRA-LOW LATENCY
+                        </span>
+</div>
+</div>
+<!-- Thumbnail Grid -->
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-lowest ring-2 ring-tertiary ring-offset-2">
+<img alt="Detail view 1" class="w-full h-full object-cover" data-alt="close up of mechanical keyboard switches with purple light shining through high quality keycaps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZlS2oiEqlh-UMjWjc_vgR6sYj044QsZGZO74fopz1a1ErfDBc_Mbohk96RrFxq8_xRV6b0s9XKuzA04PaHMZvfc2KNK4xg5wdnmBltP1qd8WBn0EHUP9Zl9VzaaQFX1phorTcwW2uvHRBZMNAC0MltCCo6IU0bcW2folkUM7NZet0RKZD1kVQ4EAAa8Dk2mEFU4qaTPmBNvLLo5_NYkLdLxw550xixt-4wr-UdYlTMy29F5ESEss3gnYmgsAzPyCwAuKcJqqzZTk"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-high hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="Detail view 2" class="w-full h-full object-cover" data-alt="side profile of a sleek wireless mechanical keyboard showing its thin profile and aluminum chassis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp0PHYRlfsgS7R3L90FMyvk1VAgCx4s3pLR3TAJLnqUYPsV4kMBzRlU2yWZ6zMkmF1pJlmCbh9-fxOtXK_tdqVMkZRGAm5N1g_mIGMWkjp58vieBic5h_lEn7nD9uglRdyQBZM_7SgSqUyaRzbafQXYVdVE9PaZtXFojOvGxWr_W_ypNBbnUEZL_xiQhpMh11l5YYxjZFGX9MMKtJPFJ-alnBltwXKpCxioUqwTOxIMaNXUKAzdH5O_xuPlKQORXdIDoQGAH74eHk"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-high hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="Detail view 3" class="w-full h-full object-cover" data-alt="top down view of a gaming keyboard customized with different color keycaps in a clean office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK99LEjZ_MddkqKEy9s9pOHs0WcVUFZlt3_1PJGB6wAEXFyxETx2pAdfP53sHuToIL3wYY6sztFRaaMAr8RCkwC88MJDBnKZWKI7wSIfJXTJ8BQoZY2JeK1wuTSU6qPBb_erDT1IndSSHQoeX4u8kafYY50ynOT_jZOZco8CY9x5qsC124RkrTl9AExjajwUGkPZ_W6gqxjuerPmf_IAKH7KEJbwS5Mw2ns3-K4JyUaM3TdE8ClYKD4tzskOsINj-Lk74XA-9EOSo"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-high relative flex items-center justify-center cursor-pointer group">
+<img alt="Detail view 4" class="w-full h-full object-cover blur-[2px] brightness-50" data-alt="abstract blurry neon lights and computer components inside a glass gaming case" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCluNJtrCZEc-0AG7T4RL-VWJc_Iko5qvR5pEt2dmfyePwn49ApCiu72xHJ8sIvbzcm8ZpIGUHifAOozTn3erUIGqYMbSgGJSIgAN2MxQllFt_6hqW1EZQfv5hdZCL7NrT8DXk2EnYbtpzM9mFkI0sQeBZiqwJ_GTLt1R651ZtN5e34D169mY9NNkXOBxB6Yby8z9I4r6M0hZNwNqZ2qYYOpbOn1Jorz0CVpfeBwJLcrX7uEt2QXrin3wE58AO4iUIthTe4xI0tJLY"/>
+<span class="absolute text-white font-bold text-sm">+2 Videos</span>
+</div>
+</div>
+<!-- Entity Context Blocks -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+<div class="p-6 rounded-xl bg-gradient-to-br from-surface-container-low to-surface-container-lowest flex items-center gap-4 group cursor-pointer border border-transparent hover:border-tertiary/20 transition-all">
+<div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+<img alt="Player" class="w-full h-full object-cover" data-alt="professional e-sports athlete headshot with neutral lighting and modern aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEjHc6UlQh-9FrAAnVZDMHgQ9nqiyLEH3gkfrkJeNvxSKW4yA9g8j1wtFrWq7DJpqQbilk9gBbuITNhNTH6xQjiKnWfdDQE4H67PC6nZFMt7YswK-TNYQ6eG4P5s4jumMbAK-YI3OL5DohLp9VdzISxKKOFzSxizLVUVc9_ViiYIZ-NKtUG4KGMcT08zLw5Mwnog0STddb9_TwN2kD2X0jMhQwCA9U2HgRr431uY3ddLO0alkpXkBN7wgs4B96HC-jZngoUnFd6mE"/>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Endorsed by</p>
+<h4 class="text-sm font-bold font-headline group-hover:text-tertiary transition-colors">Viper_Striker</h4>
+</div>
+</div>
+<div class="p-6 rounded-xl bg-gradient-to-br from-surface-container-low to-surface-container-lowest flex items-center gap-4 group cursor-pointer border border-transparent hover:border-tertiary/20 transition-all">
+<div class="w-12 h-12 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant font-bold">Official gear of</p>
+<h4 class="text-sm font-bold font-headline group-hover:text-tertiary transition-colors">World Masters 2024</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Product Info & Purchase (5/12) -->
+<aside class="lg:col-span-5 space-y-10">
+<div class="space-y-4">
+<h1 class="text-4xl lg:text-5xl font-black font-headline tracking-tighter leading-tight uppercase">SportVerse Kinetic X-900</h1>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                        Precision-engineered for the elite level. The X-900 features hall-effect magnetic switches with adjustable actuation, encased in an aerospace-grade aluminum chassis.
+                    </p>
+<div class="flex items-center gap-3">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">star_half</span>
+</div>
+<span class="text-xs font-semibold text-outline">4.8 (1.2k Reviews)</span>
+</div>
+</div>
+<!-- Price Block -->
+<div class="bg-surface-container-lowest p-8 rounded-xl space-y-6">
+<div class="flex items-baseline gap-4">
+<span class="text-4xl font-black font-headline text-tertiary tracking-tighter">$249.99</span>
+<span class="text-on-surface-variant line-through text-lg font-medium">$299.99</span>
+<span class="bg-error-container text-on-error-container text-[10px] px-2 py-0.5 rounded-full font-bold">SAVE $50</span>
+</div>
+<!-- Variant Picker: Switches -->
+<div class="space-y-3">
+<div class="flex justify-between items-center">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Switch Type</span>
+<span class="text-xs font-semibold text-tertiary">Mag-Rapid (Linear)</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="border-2 border-tertiary bg-tertiary/5 p-3 rounded-lg flex flex-col items-center gap-1">
+<div class="w-4 h-4 rounded-full bg-red-500 shadow-sm"></div>
+<span class="text-[10px] font-bold">Linear</span>
+</button>
+<button class="border-2 border-transparent bg-surface-container-high p-3 rounded-lg flex flex-col items-center gap-1 hover:border-outline-variant transition-all">
+<div class="w-4 h-4 rounded-full bg-blue-500 shadow-sm"></div>
+<span class="text-[10px] font-bold">Tactile</span>
+</button>
+<button class="border-2 border-transparent bg-surface-container-high p-3 rounded-lg flex flex-col items-center gap-1 hover:border-outline-variant transition-all">
+<div class="w-4 h-4 rounded-full bg-slate-400 shadow-sm"></div>
+<span class="text-[10px] font-bold">Clicky</span>
+</button>
+</div>
+</div>
+<!-- Variant Picker: Keycaps -->
+<div class="space-y-3">
+<span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant">Color Profile</span>
+<div class="flex gap-3">
+<button class="w-8 h-8 rounded-full bg-slate-900 ring-2 ring-offset-2 ring-slate-900"></button>
+<button class="w-8 h-8 rounded-full bg-tertiary ring-2 ring-offset-2 ring-transparent hover:ring-tertiary/30"></button>
+<button class="w-8 h-8 rounded-full bg-slate-100 ring-2 ring-offset-2 ring-transparent hover:ring-slate-300"></button>
+</div>
+</div>
+<div class="flex gap-4">
+<button class="flex-1 bg-gradient-to-r from-primary to-primary-container text-on-primary font-headline font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl" data-icon="shopping_basket">shopping_basket</span>
+                            ADD TO CART
+                        </button>
+<button class="w-14 h-14 bg-surface-container-high rounded-lg flex items-center justify-center text-on-surface-variant hover:text-error hover:bg-error-container/20 transition-all">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="flex items-center gap-4 py-2 border-t border-surface-variant/30">
+<div class="flex items-center gap-2 text-[10px] font-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="local_shipping">local_shipping</span>
+                            FREE GLOBAL SHIPPING
+                        </div>
+<div class="flex items-center gap-2 text-[10px] font-bold text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-base" data-icon="verified_user">verified_user</span>
+                            2 YEAR WARRANTY
+                        </div>
+</div>
+</div>
+</aside>
+</div>
+<!-- Technical Specs & Bento Grid -->
+<section class="mt-20 space-y-8">
+<div class="flex flex-col items-center text-center max-w-2xl mx-auto space-y-4">
+<h2 class="text-3xl font-black font-headline tracking-tighter uppercase">The Competitive Edge</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">Built for millisecond precision where every frame counts. The Kinetic Stadium hardware ecosystem provides the ultimate performance loop.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Spec Card 1 -->
+<div class="bg-surface-container-low p-8 rounded-xl space-y-4 border-l-4 border-tertiary">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="speed">speed</span>
+<h3 class="text-lg font-black font-headline uppercase">Rapid Response</h3>
+<p class="text-sm text-on-surface-variant">0.1ms debounce time with Hall-Effect sensors. Instantly registers your fastest flick movements without mechanical friction.</p>
+</div>
+<!-- Spec Card 2 -->
+<div class="bg-surface-container-low p-8 rounded-xl space-y-4 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="settings_input_hdmi">settings_input_hdmi</span>
+<h3 class="text-lg font-black font-headline uppercase">Direct Wired</h3>
+<p class="text-sm text-on-surface-variant">Detachable double-sleeved USB-C paracord. Zero interference, zero lag, maximum reliability during tournament play.</p>
+</div>
+<!-- Spec Card 3 -->
+<div class="bg-surface-container-low p-8 rounded-xl space-y-4 border-l-4 border-secondary">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="memory">memory</span>
+<h3 class="text-lg font-black font-headline uppercase">On-board Logic</h3>
+<p class="text-sm text-on-surface-variant">ARM Cortex processor stores up to 10 pro-level profiles. No software required at the tournament stage.</p>
+</div>
+</div>
+<!-- Detailed Spec Table (Asymmetric Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-8 items-center">
+<div class="space-y-6">
+<h3 class="text-2xl font-black font-headline uppercase tracking-tighter">Full Technical Matrix</h3>
+<div class="space-y-1">
+<div class="flex justify-between py-3 border-b border-surface-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Actuation Force</span>
+<span class="text-sm font-semibold">35g - 50g Adjustable</span>
+</div>
+<div class="flex justify-between py-3 border-b border-surface-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Polling Rate</span>
+<span class="text-sm font-semibold">8,000Hz (Real-time)</span>
+</div>
+<div class="flex justify-between py-3 border-b border-surface-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Build Material</span>
+<span class="text-sm font-semibold">CNC Aluminum 6061</span>
+</div>
+<div class="flex justify-between py-3 border-b border-surface-variant/20">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Switch Life</span>
+<span class="text-sm font-semibold">100 Million Keystrokes</span>
+</div>
+<div class="flex justify-between py-3">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Connectivity</span>
+<span class="text-sm font-semibold">USB-C to A / Bluetooth 5.2</span>
+</div>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl">
+<img alt="Internal design" class="w-full h-full object-cover" data-alt="3D render exploded view of a mechanical keyboard showing the internal chip, switches, and aluminum plate in futuristic blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMZi0ztj628JMcURGCoHqxgOYM6Lo1qwazJdKLcsqzszaoB8-zQqminKBdsN9q82zFikGDnshKw6U5X6GyAWRoIjRBHA-qru63Yni1nmmjAFr4bYY3h2ZLNKJmWWL16EPx-eMMDrhgE-YkOLlL588dObP6uctE9HH94vA7MvEwOJWGxTD-29qqX5LnBNbgxI8MNIivPkevC_P7zz-3eqcRiPyEYObUSDp5L7pScMHWclKx5-a4Hl7ke14PDJosQpHxHnK7Po-Kq78"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+<p class="text-white text-xs font-medium italic">Internal structure designed for acoustic resonance control and maximum thermal dissipation during high-wattage RGB usage.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Products (Category Cluster) -->
+<section class="mt-32 space-y-8">
+<div class="flex justify-between items-end">
+<h2 class="text-3xl font-black font-headline tracking-tighter uppercase">Complete the Setup</h2>
+<a class="text-xs font-bold text-tertiary flex items-center gap-1 hover:gap-2 transition-all" href="#">
+                    VIEW ALL PERIPHERALS <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Related Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden mb-4 relative">
+<img alt="Mouse" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="modern gaming mouse with honeycomb design and rgb lighting on a dark minimalist mousepad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC02O2bbFm0zGPV9SRFpYhHnM5ocvNZSmaxqpPAr9ouFWpBDVGgse6jB6b8xEeCuA75AX09E12773HTgcYu6a1VpM6tg39ssYWqEfDSzIKVdMwdAXvTDvet9jbf91N1UvkdXjwOKNmWgcWktHpZifdrj0tr8VhydTXu0PDUnxLz_DVhxnZK87G0VkOgk44uVnj5nwzqc2bUdhC2a9td0nsGLDcDy90qVE9vxGrxxa5x6jmSviMH1aBlnDwYATI4WMmYSA-P4Ccc2og"/>
+<span class="absolute top-2 right-2 bg-surface p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+</span>
+</div>
+<h4 class="text-sm font-bold uppercase tracking-tight">Kinetic Ghost Mouse</h4>
+<p class="text-xs text-on-surface-variant font-medium">$89.00</p>
+</div>
+<!-- Related Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden mb-4 relative">
+<img alt="Headset" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="high quality wireless gaming headset with large earcups and purple led accents in a studio environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1seNE1hrpE7Aa8tbEJgFD--ANX1-cuoJeg_z0iyt69jOkvqCV37VU2cc2CU7-QHbYxZPxsFjWXyn6VQpzayKy80iyjOUDn543P5_QTWCNE_XnpCfVqlwjU224olu1yV4g5LzYptzn5uB8QW8Yb-fc_ODe-W70wwg35s9WYOt_A51W5kBryK7yG5pGwGpHjLOZWQgTbFRRoa5pW88e_rX4xh4P-f_RDZZkox6MfLTM2ytEUY850D6KrzSLGNliow0CVA39el0Wm-g"/>
+<span class="absolute top-2 right-2 bg-surface p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+</span>
+</div>
+<h4 class="text-sm font-bold uppercase tracking-tight">SonicPro Wireless H7</h4>
+<p class="text-xs text-on-surface-variant font-medium">$179.00</p>
+</div>
+<!-- Related Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden mb-4 relative">
+<img alt="Mousepad" class="w-full h-full object-cover transition-transform group-hover:scale-110" data-alt="ultra large minimalist dark grey desk mat on a wood grain desk surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3XFetEu5QgxGB_0XCy1_M3D9l96-mzl1vx02eAjMMSWhU9BgoG4DDjkumzeca5XkWYxGluUtj07oXava6zCBj69lFM3AqJenhrG4N0NBohzyo_6smcwViyprCgwi50lrlknsImL8Jt0WYKBwfzozuSb_LaSwwiQ3M3rDH-ApKhOHk0omInbE3K1YDvDXPpLpJtKP2g5S4PJe-ssdB-CdMVRRpFM03bXMme8zwOR8TnOO_HQ6cmAnnw7Vm5aO7PR-sR2uOgJZdM_w"/>
+<span class="absolute top-2 right-2 bg-surface p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+</span>
+</div>
+<h4 class="text-sm font-bold uppercase tracking-tight">Kinetic Stadium XXL Mat</h4>
+<p class="text-xs text-on-surface-variant font-medium">$35.00</p>
+</div>
+<!-- Related Item 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden mb-4 relative">
+<img alt="Switches" class="w-full h-full object-crop transition-transform group-hover:scale-110" data-alt="pack of mechanical keyboard switches with clear housings and copper pins on a white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsFNzyHxpKpJDJ2QzSSKECDCr7VEAy7VpzxgkNBOsU07_6L9NXFFT6sJtTH2Vlv9C_BOv6z82P7VqDhd8XQ2UxAPcq1a0KWhugs_OSerAYlKbrZg08unAq4-77zdMj0uK-BR4w1GCyODlbrA0lq7juoMLGDVaxMb30FYj59qozMFTYcOtL5LFjA_1dirRANypIWZNtcm8wGGev-fxwbRYnk8DKe3lK4Dr1LtebfV1Vx10cj-pukGD24TDXwQtmUJyTcwUSdKvvweU"/>
+<span class="absolute top-2 right-2 bg-surface p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add_shopping_cart">add_shopping_cart</span>
+</span>
+</div>
+<h4 class="text-sm font-bold uppercase tracking-tight">Rapid-Spring Switch Pack</h4>
+<p class="text-xs text-on-surface-variant font-medium">$45.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full mt-auto border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-[1440px] mx-auto font-inter text-xs text-slate-500 dark:text-slate-400">
+<div class="space-y-4">
+<span class="text-lg font-black text-slate-900 dark:text-white">SportVerse</span>
+<p class="leading-relaxed">The global hub for competitive sports and e-sports performance gear. Designed for athletes, powered by kinetics.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-blue-600 transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-blue-600 transition-colors" data-icon="podcasts">podcasts</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-blue-600 transition-colors" data-icon="campaign">campaign</span>
+</div>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-widest">Shop</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Keyboards</a></li>
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Mice &amp; Pads</a></li>
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Audio</a></li>
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Merchandise</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-widest">Support</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Track Order</a></li>
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Stadium Rules</a></li>
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Contact Support</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-slate-900 dark:text-white mb-4 uppercase tracking-widest">Newsletter</h5>
+<p class="mb-4">Get early access to drops and tournament info.</p>
+<div class="flex gap-2">
+<input class="bg-white dark:bg-slate-800 border-none rounded px-3 py-2 w-full text-[10px]" placeholder="Email" type="email"/>
+<button class="bg-blue-700 text-white px-4 py-2 rounded font-bold hover:bg-blue-800 transition-colors">JOIN</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-8 py-6 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px]">
+<span>© 2024 SportVerse Kinetic Stadium. All Rights Reserved.</span>
+<div class="flex gap-6 uppercase tracking-widest font-bold">
+<a class="hover:text-blue-600" href="#">Privacy Policy</a>
+<a class="hover:text-blue-600" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

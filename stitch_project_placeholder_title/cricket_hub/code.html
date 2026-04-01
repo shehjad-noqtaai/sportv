@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SportVerse | Cricket Vertical Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#1b6d24",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#6e24f5",
+                        "on-tertiary-fixed-variant": "#5400cc",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface": "#191c1d",
+                        "primary": "#005bbf",
+                        "on-background": "#191c1d",
+                        "on-primary-container": "#ffffff",
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-container": "#8652ff",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-container": "#217128",
+                        "background": "#f8f9fa",
+                        "surface-bright": "#f8f9fa",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#2e3132",
+                        "surface-container-low": "#f3f4f5",
+                        "outline": "#727785",
+                        "surface-tint": "#005bc0",
+                        "secondary-fixed-dim": "#88d982",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-tertiary-fixed": "#22005d",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#adc7ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e9ddff",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "secondary-fixed": "#a3f69c",
+                        "surface-container": "#edeeef",
+                        "on-surface-variant": "#414754",
+                        "on-primary-fixed": "#001a41",
+                        "surface-container-highest": "#e1e3e4",
+                        "outline-variant": "#c1c6d6",
+                        "tertiary-fixed-dim": "#cfbcff",
+                        "on-primary-fixed-variant": "#004493",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-dim": "#d9dadb",
+                        "primary-container": "#1a73e8",
+                        "secondary-container": "#a0f399",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#adc7ff",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #005bbf 0%, #1a73e8 100%);
+        }
+        .cricket-accent-gradient {
+            background: linear-gradient(135deg, #1b6d24 0%, #217128 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center h-16 w-full px-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-blue-700 dark:text-blue-400">SportVerse</div>
+<div class="hidden md:flex items-center gap-8 font-plus-jakarta text-sm tracking-tight font-bold">
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 transition-all duration-300 ease-in-out hover:opacity-80" href="#">Cricket</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300 ease-in-out hover:opacity-80" href="#">Tennis</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300 ease-in-out hover:opacity-80" href="#">E-sports</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300 ease-in-out hover:opacity-80" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="scale-95 active:scale-90 transition-transform"><span class="material-symbols-outlined text-slate-600" data-icon="shopping_cart">shopping_cart</span></button>
+<button class="scale-95 active:scale-90 transition-transform"><span class="material-symbols-outlined text-slate-600" data-icon="account_circle">account_circle</span></button>
+</div>
+</div>
+</nav>
+<div class="flex max-w-[1440px] mx-auto">
+<!-- Sidebar Navigation Shell -->
+<aside class="hidden lg:flex flex-col py-8 h-screen w-64 border-r-0 bg-slate-50 sticky top-16">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-1">
+<img alt="User Profile" class="w-10 h-10 rounded-full" data-alt="close-up portrait of a professional man in a tech environment with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu5QFSyH9NLBLvHtMfZTz_LDPdlF0FxRExIovKcmCkGFxaomLFXcwxBzRBOyBptzRedey3B9YRXaUF2zqLjeD65Nk99geM9VsoifUfE6SCLPpuEKNQOwEGmJxT7txiSHkoASmHbHC9dw6z_wLZA_7sJQZ9tH1Wct7JgtIJfVYatpAVcwnAMAVDboNiukdmL1AUQ3FrYCSj6i-7qC2F3PerupjnZQRc4Lh753xWmSZI8Wj0JoMyRbD0GOPHKmeRRmxhyYHbF2C24DQ"/>
+<div>
+<div class="text-xs uppercase tracking-widest font-bold text-blue-700 font-headline">Stadium Access</div>
+<div class="text-[10px] text-slate-500 uppercase tracking-tighter">Premium Member</div>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:bg-slate-100 hover:translate-x-1 transition-transform font-headline text-xs uppercase tracking-widest font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span> Home
+                </a>
+<a class="flex items-center gap-3 bg-blue-50 text-blue-700 rounded-r-full py-3 px-6 hover:translate-x-1 transition-transform font-headline text-xs uppercase tracking-widest font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="sports_score">sports_score</span> Live Scores
+                </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:bg-slate-100 hover:translate-x-1 transition-transform font-headline text-xs uppercase tracking-widest font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span> Schedule
+                </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:bg-slate-100 hover:translate-x-1 transition-transform font-headline text-xs uppercase tracking-widest font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span> Tournaments
+                </a>
+<a class="flex items-center gap-3 text-slate-500 py-3 px-6 hover:bg-slate-100 hover:translate-x-1 transition-transform font-headline text-xs uppercase tracking-widest font-bold" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span> Rankings
+                </a>
+</nav>
+<div class="mt-auto px-6">
+<button class="w-full kinetic-gradient text-white rounded-lg py-3 text-xs uppercase tracking-widest font-bold shadow-md hover:opacity-90 transition-opacity">Upgrade to Pro</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full overflow-hidden">
+<!-- Live Match Ticker -->
+<div class="bg-surface-container-high py-2 border-b-0">
+<div class="flex items-center gap-8 px-6 animate-marquee whitespace-nowrap overflow-x-auto hide-scrollbar">
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-md shadow-sm min-w-max">
+<span class="flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-error">Live</span>
+<span class="text-xs font-semibold">IPL: MI 182/4 (18.2) vs CSK</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-md shadow-sm min-w-max">
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Upcoming</span>
+<span class="text-xs font-semibold">T20: IND vs AUS • 19:30</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-md shadow-sm min-w-max">
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Stumps</span>
+<span class="text-xs font-semibold">Test: ENG 432 vs NZ 210/6</span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-lowest px-4 py-2 rounded-md shadow-sm min-w-max">
+<span class="flex h-2 w-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-error">Live</span>
+<span class="text-xs font-semibold">BBL: SCO 156/8 (20.0) • STR 45/1 (5.2)</span>
+</div>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="relative h-[600px] overflow-hidden">
+<img alt="Cricket Stadium" class="absolute inset-0 w-full h-full object-cover" data-alt="cinematic wide shot of a modern cricket stadium at night under bright floodlights with a packed audience and misty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsGGNg12YCV7EBXm-4y_ya3DWaEdIrIWEyeXX3CoewkUfQySF_XwOtVK9lrkZqz4vO3nWd-k7KbDhZsuvAy9uhQKO61lXX8PogOkA1xj--NeKjpHyT3-2M9is5CeR0IHhniNayW0HVGBIcPiJu6Wwejkr6_hcu1CgIoD-V3gIrtK3ZLAyTKYJfoXRIvKFyC2zuPtdlk6t1ClngdoWWrw_uNtlXHs5KaQVu8daNcEJ9PCUYY1jw1vmDfHGuovZtgVhyHEisPCzaUp0"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface via-on-surface/40 to-transparent"></div>
+<div class="relative z-10 h-full flex flex-col justify-center px-12 max-w-4xl">
+<span class="inline-block px-3 py-1 bg-secondary text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded mb-6">Vertical Exclusive</span>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold text-white leading-none tracking-tighter mb-6 italic">KINETIC<br/>CRICKET.</h1>
+<p class="text-white/80 text-lg max-w-xl mb-8 leading-relaxed font-light">Experience every boundary, every wicket, and every tactical shift with real-time analytics and immersive stadium coverage.</p>
+<div class="flex gap-4">
+<button class="kinetic-gradient text-white px-8 py-4 rounded-md font-headline font-bold text-sm uppercase tracking-widest shadow-xl hover:scale-105 transition-transform">Explore Matches</button>
+<button class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-md font-headline font-bold text-sm uppercase tracking-widest hover:bg-white/20 transition-all">Watch Live</button>
+</div>
+</div>
+<!-- Featured Overlay Card (Asymmetry) -->
+<div class="absolute bottom-12 right-12 hidden xl:block w-80 bg-surface-container-lowest/90 backdrop-blur-xl p-6 rounded-xl shadow-2xl transform translate-y-6">
+<div class="flex justify-between items-center mb-4">
+<span class="text-[10px] font-black uppercase tracking-widest text-secondary">Pitch Report</span>
+<span class="material-symbols-outlined text-secondary" data-icon="analytics">analytics</span>
+</div>
+<div class="text-2xl font-headline font-extrabold text-on-surface mb-2">Hard &amp; Dry</div>
+<p class="text-xs text-on-surface-variant leading-relaxed">Wankhede Stadium expecting high bounce. Pacers may find early swing under lights.</p>
+</div>
+</section>
+<!-- Featured Players (Entity Grid) -->
+<section class="py-20 px-6 lg:px-12 bg-surface">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter text-on-surface">ELITE PERFORMERS</h2>
+<div class="h-1 w-20 bg-secondary mt-2"></div>
+</div>
+<a class="text-secondary font-bold text-xs uppercase tracking-widest flex items-center gap-2" href="#">View Rankings <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Player Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-visible relative p-6 group transition-all hover:bg-surface-container">
+<img alt="Player" class="w-24 h-24 rounded-full object-cover absolute -top-8 -right-4 border-4 border-surface shadow-lg group-hover:scale-110 transition-transform" data-alt="professional portrait of a cricket player in a clean white jersey looking determined against a neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcIFpkDqeW7XPRcarVTDKgln_m5j-7-qtZxsJYaUTUo9NeUNzhtYD9StSypXSgWVrtIhk5yX1scshX60EAdIpykQijRx6azm7BqIDBL9vmGNiROZy1Ud--EzG5_XQrqRANkNGT8po-iaI7S2YV3lNOANCLN34wj8rMOW3IatF6iDQMsIJHMINP0ZbJhjhWzwZuBwSNaod4k2KbJgkLTORt0vpCLNtDC2dYFxe0DGZdzLiQW7Pi-WtdJ9bQP64UUv4RNzYWy3y-H70"/>
+<div class="mb-4">
+<span class="bg-secondary/10 text-secondary text-[10px] font-bold px-2 py-1 rounded">Batsman</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-1">Virat Kohli</h3>
+<div class="text-xs text-on-surface-variant mb-6">India • Royal Challengers</div>
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-high pt-4">
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Avg</div>
+<div class="text-lg font-headline font-black">52.7</div>
+</div>
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Runs</div>
+<div class="text-lg font-headline font-black">12,898</div>
+</div>
+</div>
+</div>
+<!-- Player Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-visible relative p-6 group transition-all hover:bg-surface-container">
+<img alt="Player" class="w-24 h-24 rounded-full object-cover absolute -top-8 -right-4 border-4 border-surface shadow-lg group-hover:scale-110 transition-transform" data-alt="close-up of a smiling professional athlete in a navy blue jersey looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAovBaYv-7bPiQ8gUdXWSQjT0C8J3hEwVhaAC8pJYVSlSE7TmaOxSiGGSl2iM9m5iaWMutPq55QVe1Nj1Wez2dsokwuV7vFhZe-l7PDyPye_-r0jss65yGTOU-2-5UEFIrP8dF6xy6tez2jqLSwa4qpB2o_nW3_acO49hhzggck-LjjOEoz7fIUOc3_hCfTb2icABWnytjnIQyahFbodyN4D8nd0B0kQgFBfBoKTWIsxOCB9NmeTgHLs1-4DmdY_JCN4iWJFsTrxzU"/>
+<div class="mb-4">
+<span class="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded">All-Rounder</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-1">Ben Stokes</h3>
+<div class="text-xs text-on-surface-variant mb-6">England • Chennai Super Kings</div>
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-high pt-4">
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">SR</div>
+<div class="text-lg font-headline font-black">145.2</div>
+</div>
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Wkts</div>
+<div class="text-lg font-headline font-black">192</div>
+</div>
+</div>
+</div>
+<!-- Player Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-visible relative p-6 group transition-all hover:bg-surface-container">
+<img alt="Player" class="w-24 h-24 rounded-full object-cover absolute -top-8 -right-4 border-4 border-surface shadow-lg group-hover:scale-110 transition-transform" data-alt="studio lighting portrait of a serious sportsman with athletic build in sports attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlHOp5AO2EZXtMOLNRgTyFOUouAt7AguIv24_wGly2NLdgddgtyvxBnz3gqvSq3Kwo_apvhFg8YgUMR_FCGb5uThSusHaTnT7KQdh5Xf0MtOmQOjzW4EQvPoGkcqEXdeVB5f3XCa8I04RKeMQmIxFywWL0zdMjXskx55CTdt8X9_Be8_wYCyKh3twiS5CvKVYc1yr221KiV6eJ2sP89JDJLi8gA_EP2GT0QWhp_1HxIlfzwZf08BRGNU6Em1IzOIBHJjHw2F-_anw"/>
+<div class="mb-4">
+<span class="bg-tertiary/10 text-tertiary text-[10px] font-bold px-2 py-1 rounded">Bowler</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-1">Rashid Khan</h3>
+<div class="text-xs text-on-surface-variant mb-6">Afghanistan • Gujarat Titans</div>
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-high pt-4">
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Econ</div>
+<div class="text-lg font-headline font-black">6.4</div>
+</div>
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Wkts</div>
+<div class="text-lg font-headline font-black">450+</div>
+</div>
+</div>
+</div>
+<!-- Player Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-visible relative p-6 group transition-all hover:bg-surface-container">
+<img alt="Player" class="w-24 h-24 rounded-full object-cover absolute -top-8 -right-4 border-4 border-surface shadow-lg group-hover:scale-110 transition-transform" data-alt="vibrant color portrait of a young cricket player in team kit against a soft bokeh stadium background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-rQhR5g1zKFziy-FzbCCVN2ImUpjLzxE9WhYzcLwVVR_0dQOhiQD8rISyGUvVw1WyDHF2hZJX1K7m5QERv4FZpxekie_bv_enolot1jgE9ZRmpQo2X0EwFVHMwmmLLQeVzLbOEwbZlMha8xTSpf3QxDIPd5cuOVMYma9U5bsP3ocKx8mCU7S11qlXv7hYN786gfQW5FAHcTXeNCvQurLDW5G6ghJCFrwYMnoJsbVzfp3_ca0kqaWlvtBYiHtNTRH1soWoAseHW9s"/>
+<div class="mb-4">
+<span class="bg-secondary/10 text-secondary text-[10px] font-bold px-2 py-1 rounded">Wicket-Keeper</span>
+</div>
+<h3 class="text-xl font-headline font-extrabold mb-1">Jos Buttler</h3>
+<div class="text-xs text-on-surface-variant mb-6">England • Rajasthan Royals</div>
+<div class="grid grid-cols-2 gap-4 border-t border-surface-container-high pt-4">
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Max</div>
+<div class="text-lg font-headline font-black">124</div>
+</div>
+<div>
+<div class="text-[10px] uppercase text-slate-400 font-bold">Catches</div>
+<div class="text-lg font-headline font-black">82</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest News & Upcoming Tournaments Bento Grid -->
+<section class="py-20 px-6 lg:px-12 bg-surface-container-low">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- News Feed (Large) -->
+<div class="lg:col-span-8">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight">KINETIC FEED</h2>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-white rounded-full text-[10px] font-bold shadow-sm">All News</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold">Transfers</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded-full text-[10px] font-bold">Match Reports</span>
+</div>
+</div>
+<div class="space-y-6">
+<!-- Article 1 -->
+<div class="flex gap-6 bg-surface-container-lowest p-4 rounded-xl group cursor-pointer hover:shadow-lg transition-shadow">
+<div class="w-1/3 aspect-video overflow-hidden rounded-lg shrink-0">
+<img alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="dynamic shot of a cricket ball hitting the stumps with flying bails and dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG_TQIXaEaT6MEqiPa8ZdW-4h42hJoKocFywqzvxiScr6NO30-yG23E8uT-S8lTkJMinWzszdHod_tPqkRY5xzI60rPTpETsBTwAuJ-jwIzIVr0isyU94XQWirwvS-foHqPcW5ud9VO52Dasv5UHvkckq_r9jtMr1OPCOFLJWcivlgz_y6Hg1jOcHKlMxPy_lAlmsBbYs71TU9NXUdg63Oc1Z1QkHffcs_3uEfHhIzhFmrRurJbogYd0GBEFFPTBv8_ia9EkgSpy8"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex gap-2 mb-2">
+<span class="text-[10px] text-tertiary font-bold uppercase tracking-wider">AI Analysis</span>
+<span class="text-[10px] text-slate-400">• 2h ago</span>
+</div>
+<h3 class="text-xl font-headline font-bold leading-tight mb-2 group-hover:text-primary transition-colors">How 'Impact Player' Rule is Changing IPL Mid-Inning Strategy</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">A deep dive into statistical trends from the last 50 matches revealing the rise of specialized finishers.</p>
+</div>
+</div>
+<!-- Article 2 -->
+<div class="flex gap-6 bg-surface-container-lowest p-4 rounded-xl group cursor-pointer hover:shadow-lg transition-shadow">
+<div class="w-1/3 aspect-video overflow-hidden rounded-lg shrink-0">
+<img alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform" data-alt="close-up of a leather cricket ball on a vibrant green grass field with soft morning dew" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUmo1BLZcipfX3X2w6xTbZsB2RrbVdvV-889hVc1Iyzvxg3VJu0MyABeoe3u1aE5K6urvhjD29NcTX15-bp6lexrsxuFKl1xuDdStdg1A9EjdauOMRMXzRaudBhcj8l_cp1OUTloONMdST9SaJk_4T3N2Xd_yA1kBMY3mooy5TGraN6jm--cpLVtAnoy7kS6RYsziWopIu1QsRL0Imtv0_06j91FRKYl4K_zym03v1BxOlCAjWsz8FgF1oUL2BO9foPP075FGovZE"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<div class="flex gap-2 mb-2">
+<span class="text-[10px] text-secondary font-bold uppercase tracking-wider">World Cup</span>
+<span class="text-[10px] text-slate-400">• 5h ago</span>
+</div>
+<h3 class="text-xl font-headline font-bold leading-tight mb-2 group-hover:text-primary transition-colors">Host Cities Announced for 2026 T20 World Cup</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Discover the 10 stadiums across India and Sri Lanka that will host the marquee event.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Upcoming Tournaments (Side) -->
+<div class="lg:col-span-4">
+<h2 class="text-2xl font-headline font-extrabold tracking-tight mb-8">TOURNAMENTS</h2>
+<div class="space-y-4">
+<!-- Tournament Card 1 -->
+<div class="cricket-accent-gradient p-6 rounded-xl text-white relative overflow-hidden">
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl opacity-10" data-icon="trophy">trophy</span>
+<div class="relative z-10">
+<div class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-white/70">Major Event</div>
+<h4 class="text-2xl font-headline font-black mb-4">Champions Trophy 2025</h4>
+<div class="flex items-center gap-2 text-xs font-semibold mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> Pakistan
+                                    </div>
+<div class="flex items-center gap-2 text-xs font-semibold">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_month">calendar_month</span> Feb 19 - Mar 09
+                                    </div>
+</div>
+</div>
+<!-- Tournament Card 2 -->
+<div class="bg-surface-container-highest p-6 rounded-xl border-l-4 border-primary">
+<div class="text-[10px] font-bold uppercase tracking-widest text-primary mb-2">Domestic League</div>
+<h4 class="text-xl font-headline font-bold mb-3">County Championship</h4>
+<div class="flex items-center gap-2 text-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span> United Kingdom
+                                </div>
+<div class="mt-4 flex justify-between items-center">
+<span class="text-[10px] bg-white px-2 py-1 rounded font-bold">Starts in 12 Days</span>
+<button class="text-primary font-black text-xs">JOIN FAN HUB</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-20 px-6 lg:px-12 bg-white">
+<div class="mb-12">
+<h2 class="text-4xl font-headline font-extrabold tracking-tighter text-on-surface">PRO GEAR</h2>
+<p class="text-on-surface-variant font-medium">Equip yourself with the same gear used by the titans of the game.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-4 p-8 relative">
+<img alt="Cricket Bat" class="w-full h-full object-contain group-hover:scale-110 transition-transform" data-alt="professional high-grade willow cricket bat with elegant branding on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTy8cb0TKrUv6j_iECPbLDjKruggRhDRVd26vM6HxuvprygUA1FDa6jxW85v8h0mkXk9zZWJzNZFpcgrlPmoWJ869bHyw4xjepeHXkLKQxXCuRkWyoIrdymmXnI__u3EHa7xdndKSZHp3j3L-vTb5snMNYW6OugbGllGYTE54s2DqYEZ4r82OF3CIP5-8437Lkxg9vjkAYq1V70EKxqHpJfIUpy0kJLbLHlmGQFj85l6OcZtsUZFnQB7wnysaPzWZFzG9JxrVlUJw"/>
+<div class="absolute top-4 right-4 h-8 w-8 bg-white rounded-full flex items-center justify-center shadow-md text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">AeroStrike Grade 1 Willow</h4>
+<div class="text-secondary font-black">$499.00</div>
+</div>
+<!-- Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-4 p-8 relative">
+<img alt="Cricket Ball" class="w-full h-full object-contain group-hover:scale-110 transition-transform" data-alt="close-up of a high-performance red leather cricket ball with prominent white stitching on a gray surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1rGSsU7ow4926TaE3dfhgn0kLID81PpyahoHgUqRUZ0TbbJaR6ONoA92AXfVcDYVt0VmMaBx2ZZAwRcIqSUQI7UgfDvgL5agWPdHC0h0v1eZaELk4mAMdYJoXcs__EJS8bCzn_3Sn12i2TQBDMu5BBbNQA_y80nxPmcb0tslSkg5y8NOE1c2EcAU038YbHX-bVwc8JUFTJcAz30S9s7moKTq8X6tKDWXixOcV1PAaiif4KruU2qWurydYBYF2Q6QHXI3In8KdqQk"/>
+<div class="absolute top-4 right-4 h-8 w-8 bg-white rounded-full flex items-center justify-center shadow-md text-slate-300">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Elite Test Match Ball (Box of 6)</h4>
+<div class="text-secondary font-black">$120.00</div>
+</div>
+<!-- Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-4 p-8 relative">
+<img alt="Gloves" class="w-full h-full object-contain group-hover:scale-110 transition-transform" data-alt="professional white cricket batting gloves with blue accents and detailed padding textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4AfLCdtanlP9INPdXNTD7etC_SmAxDky2tVYyKHcu6l36NkpvyjbZx0yFLDndfX6mYxJDnGegodXrAttJM6bRxzyRmJL3XZVPK2rN88SbeQsIynxILKkrqhKLsFOdmvNH2mHnLMrK0MJ5QM3_lzEd0cU-laFEXXxKZTH7rf7BZ2eRxWo7YTh4rQc2Ireghc4io5GopLVoXP0I5rvhi9HfycvxwL-ulZj6BAUA4Zw6GHiJQdO7v_JYR4uGBBJfsx_RqlrIDkO9MzE"/>
+<div class="absolute top-4 right-4 h-8 w-8 bg-white rounded-full flex items-center justify-center shadow-md text-slate-300">
+<span class="material-symbols-outlined text-sm" data-icon="favorite">favorite</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Shield-X Pro Gloves</h4>
+<div class="text-secondary font-black">$85.00</div>
+</div>
+<!-- Product 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container-low rounded-lg overflow-hidden mb-4 p-8 relative">
+<img alt="Helmet" class="w-full h-full object-contain group-hover:scale-110 transition-transform" data-alt="sleek modern cricket helmet in navy blue with stainless steel grill and aerodynamic vents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4iYJWB_dcFFRBdSGuREvarunXelfkzeV4VTqCxfPTZCg2Of2D5Kl2bgNfXSTH95jXTqlVTKQXpDwnFskqnpzXstqLWuF73qJaT32RMjVbCfv-b07J-rjYy2bTbG5wXMME99FL2WKZR6eyBH9ha8U8ytNqm5sAAMPkP0dccSGtTmxHGeWuZdtLCsqiPc2qz9iQ6JZ860oPeX3f4NBmhazi7CqT0vVeS0Ac5YzWTX-gRAYql5cvFMqlPmDQBY31OHzeun1LkY3aytw"/>
+<div class="absolute top-4 right-4 h-8 w-8 bg-white rounded-full flex items-center justify-center shadow-md text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="favorite" data-weight="fill">favorite</span>
+</div>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Titanium Pro-Shell Helmet</h4>
+<div class="text-secondary font-black">$159.00</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer Shell -->
+<footer class="bg-slate-100 dark:bg-slate-900 w-full mt-auto border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-[1440px] mx-auto">
+<div class="col-span-1">
+<div class="text-lg font-black text-slate-900 dark:text-white mb-4">SportVerse</div>
+<p class="text-xs text-slate-500 font-inter leading-relaxed">The ultimate digital stadium experience for global sports enthusiasts. Real-time data, high-performance gear, and kinetic content.</p>
+</div>
+<div class="col-span-1">
+<h5 class="font-headline font-bold text-sm mb-4">Ecosystem</h5>
+<ul class="space-y-2 text-xs text-slate-500 font-inter">
+<li><a class="hover:text-slate-900 transition-colors" href="#">Stadium Rules</a></li>
+<li><a class="hover:text-slate-900 transition-colors" href="#">Member Perks</a></li>
+<li><a class="hover:text-slate-900 transition-colors" href="#">Live Broadcasters</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-headline font-bold text-sm mb-4">Support</h5>
+<ul class="space-y-2 text-xs text-slate-500 font-inter">
+<li><a class="hover:text-slate-900 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-slate-900 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-slate-900 transition-colors" href="#">Stadium Support</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="font-headline font-bold text-sm mb-4">Connect</h5>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-primary transition-colors" data-icon="forum">forum</span>
+</div>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-8 pb-8 text-[10px] text-slate-400 font-inter text-center md:text-left">
+            © 2024 SportVerse Kinetic Stadium. All Rights Reserved.
+        </div>
+</footer>
+<!-- Mobile Bottom Nav -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg flex justify-around items-center h-16 border-t border-slate-100 z-50">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" data-icon="sports_cricket" data-weight="fill">sports_cricket</span>
+<span class="text-[10px] font-bold">Cricket</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="live_tv">live_tv</span>
+<span class="text-[10px] font-bold">Live</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="text-[10px] font-bold">Store</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold">Profile</span>
+</button>
+</div>
+</body></html>

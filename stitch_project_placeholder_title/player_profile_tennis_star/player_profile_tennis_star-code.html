@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,700;0,800;1,800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#1b6d24",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#6e24f5",
+                    "on-tertiary-fixed-variant": "#5400cc",
+                    "on-secondary-fixed": "#002204",
+                    "on-primary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "primary": "#005bbf",
+                    "on-background": "#191c1d",
+                    "on-primary-container": "#ffffff",
+                    "on-secondary-fixed-variant": "#005312",
+                    "tertiary-container": "#8652ff",
+                    "on-tertiary-container": "#ffffff",
+                    "on-secondary-container": "#217128",
+                    "background": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-low": "#f3f4f5",
+                    "outline": "#727785",
+                    "surface-tint": "#005bc0",
+                    "secondary-fixed-dim": "#88d982",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-fixed": "#22005d",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#adc7ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#e9ddff",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "secondary-fixed": "#a3f69c",
+                    "surface-container": "#edeeef",
+                    "on-surface-variant": "#414754",
+                    "on-primary-fixed": "#001a41",
+                    "surface-container-highest": "#e1e3e4",
+                    "outline-variant": "#c1c6d6",
+                    "tertiary-fixed-dim": "#cfbcff",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-dim": "#d9dadb",
+                    "primary-container": "#1a73e8",
+                    "secondary-container": "#a0f399",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#adc7ff",
+                    "primary-fixed": "#d8e2ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "1rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 91, 191, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-sm dark:shadow-none bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800">
+<div class="flex justify-between items-center h-16 w-full px-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black italic tracking-tighter text-blue-700 dark:text-blue-400">SportVerse</div>
+<div class="hidden md:flex items-center gap-8 font-plus-jakarta text-sm tracking-tight font-bold">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300 ease-in-out hover:opacity-80" href="#">Cricket</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 dark:border-blue-400 pb-1 transition-all duration-300 ease-in-out hover:opacity-80" href="#">Tennis</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300 ease-in-out hover:opacity-80" href="#">E-sports</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-all duration-300 ease-in-out hover:opacity-80" href="#">Shop</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant transition-transform active:scale-90">shopping_cart</button>
+<button class="material-symbols-outlined text-on-surface-variant transition-transform active:scale-90">account_circle</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto px-6 lg:px-12 py-8">
+<!-- Player Hero Section -->
+<section class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16 items-end">
+<!-- Portrait & Background Momentum -->
+<div class="lg:col-span-7 relative group">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10 animate-pulse"></div>
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="dynamic low angle portrait of a professional tennis player in mid-serve motion, intense focus, sunny stadium lighting, sharp athletic details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXaBJ-moBwWhFAz2yAxmUDyJPlafO_gPALo1VOJczlY-qn7XDdDj6lxmoY0oVLyEY_BWqF_0DDZPeZdQIZToEW_PFLHvYOz8fc4qcXxTIRhFh1af5e0HVmKN6a9anb6WcmbnkWokdg0mIJDG_s1gEMd27-7kI2eSpb0s4yIb57lkcBrri1RDaVtyKK3dqYzC789fOjwr_L_e549xLFTl5XJWXuz3wDrs7L5cBabWyIp-zaq94G9b4dRdJ9tAFERoB9f_yuabgsjWo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-headline font-bold text-xs tracking-widest uppercase rounded-sm mb-2">Pro Circuit #4</span>
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-white tracking-tighter italic">MARCUS <br/>REYNOLDS</h1>
+</div>
+</div>
+</div>
+<!-- Quick Bio & Identity -->
+<div class="lg:col-span-5 flex flex-col gap-6 lg:pb-8">
+<div class="flex flex-wrap gap-4">
+<div class="bg-surface-container-high px-6 py-4 rounded-lg flex-1 min-w-[140px]">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-1">Nationality</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">flag</span>
+<span class="font-headline font-bold">Spain</span>
+</div>
+</div>
+<div class="bg-surface-container-high px-6 py-4 rounded-lg flex-1 min-w-[140px]">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-1">Plays</p>
+<span class="font-headline font-bold">Right-handed</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-l-4 border-primary">
+<p class="text-on-surface-variant leading-relaxed text-lg italic">
+                        "The court is where pressure meets precision. I don't just play for points; I play for the perfect kinetic flow that turns a match into an art form."
+                    </p>
+</div>
+<div class="flex gap-4">
+<a class="p-3 rounded-full bg-surface-container hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="p-3 rounded-full bg-surface-container hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+<a class="p-3 rounded-full bg-surface-container hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Stats Dashboard (Interactive/Bento Style) -->
+<section class="mb-16">
+<div class="flex justify-between items-end mb-8">
+<div>
+<span class="text-xs font-headline font-bold uppercase tracking-[0.2em] text-primary">Live Data</span>
+<h2 class="text-3xl font-headline font-black italic tracking-tight">KINETIC METRICS</h2>
+</div>
+<div class="hidden md:flex gap-2">
+<button class="px-4 py-2 bg-surface-container rounded-full text-xs font-bold uppercase tracking-wider">Season 2024</button>
+<button class="px-4 py-2 bg-primary text-white rounded-full text-xs font-bold uppercase tracking-wider shadow-lg shadow-primary/20">All-Time</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+<!-- Large Stat Card -->
+<div class="md:col-span-2 lg:col-span-2 bg-primary-container p-8 rounded-xl text-white relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined text-[120px]">sports_tennis</span>
+</div>
+<p class="text-xs font-label uppercase tracking-widest text-primary-fixed opacity-80 mb-4">First Serve Accuracy</p>
+<div class="text-6xl font-headline font-black mb-2 italic">74.2%</div>
+<div class="flex items-center gap-2 text-primary-fixed text-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+2.4% from last season</span>
+</div>
+</div>
+<!-- Bento Grid Small Cards -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-b-4 border-secondary-container">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-2">Aces Total</p>
+<div class="text-3xl font-headline font-black italic">842</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-b-4 border-tertiary">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-2">Win Rate</p>
+<div class="text-3xl font-headline font-black italic">68%</div>
+</div>
+<div class="md:col-span-2 bg-surface-container-lowest p-6 rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-4">Break Points Saved</p>
+<div class="w-full bg-surface-container-high h-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[62%]"></div>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4">
+<span class="font-headline font-bold italic">62% Efficiency</span>
+<span class="text-xs font-label text-outline">Tour Avg: 54%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border-b-4 border-primary">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-2">Top Speed</p>
+<div class="text-3xl font-headline font-black italic">218 <span class="text-sm">km/h</span></div>
+</div>
+<div class="md:col-span-2 lg:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm relative overflow-hidden">
+<p class="text-xs font-label uppercase tracking-widest text-outline mb-6">Performance Matrix</p>
+<div class="flex items-end justify-between h-24 gap-2">
+<div class="w-full bg-primary/20 rounded-t-md h-[40%]"></div>
+<div class="w-full bg-primary/40 rounded-t-md h-[60%]"></div>
+<div class="w-full bg-primary/60 rounded-t-md h-[85%]"></div>
+<div class="w-full bg-primary rounded-t-md h-[70%]"></div>
+<div class="w-full bg-primary/50 rounded-t-md h-[95%]"></div>
+<div class="w-full bg-primary/30 rounded-t-md h-[55%]"></div>
+</div>
+<p class="mt-4 text-xs font-label text-outline text-right">Last 6 Tournaments</p>
+</div>
+</div>
+</section>
+<!-- Career Timeline & Equipment Overlap -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+<!-- Career Timeline -->
+<div class="lg:col-span-7">
+<h2 class="text-3xl font-headline font-black italic tracking-tight mb-8">MILESTONE TRACKER</h2>
+<div class="space-y-0">
+<div class="group relative pl-8 pb-10 border-l-2 border-surface-container-high">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary group-hover:scale-150 transition-transform ring-4 ring-background"></div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm group-hover:translate-x-2 transition-transform border-l-2 border-primary">
+<span class="text-xs font-headline font-extrabold text-primary uppercase">2024 • Winner</span>
+<h3 class="text-xl font-headline font-bold mb-2">Madrid Open Finals</h3>
+<p class="text-sm text-on-surface-variant">Secured first Clay court title in a grueling 3-set match against world #1.</p>
+</div>
+</div>
+<div class="group relative pl-8 pb-10 border-l-2 border-surface-container-high">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-outline-variant group-hover:scale-150 transition-transform ring-4 ring-background"></div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm group-hover:translate-x-2 transition-transform">
+<span class="text-xs font-headline font-extrabold text-outline uppercase">2023 • Semi-Finalist</span>
+<h3 class="text-xl font-headline font-bold mb-2">Wimbledon Championships</h3>
+<p class="text-sm text-on-surface-variant">An incredible run on grass, ending a 5-year drought for Spanish players at the semis.</p>
+</div>
+</div>
+<div class="group relative pl-8 border-l-2 border-surface-container-high">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-outline-variant group-hover:scale-150 transition-transform ring-4 ring-background"></div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm group-hover:translate-x-2 transition-transform">
+<span class="text-xs font-headline font-extrabold text-outline uppercase">2021 • Pro Debut</span>
+<h3 class="text-xl font-headline font-bold mb-2">ATP Next Gen Finals</h3>
+<p class="text-sm text-on-surface-variant">Qualified for the season-ending tournament for top 21-and-under players.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Equipment Section -->
+<div class="lg:col-span-5">
+<div class="sticky top-24">
+<h2 class="text-3xl font-headline font-black italic tracking-tight mb-8">THE ARSENAL</h2>
+<div class="relative bg-surface-container p-8 rounded-xl overflow-visible">
+<div class="absolute -right-12 -top-12 w-48 h-48 rotate-12 transition-transform hover:rotate-6">
+<img class="w-full h-full object-contain drop-shadow-2xl" data-alt="isolated view of a high-end black and neon green carbon fiber tennis racket, professional sports equipment aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8XVxdXdz3kKrxdgSIP3G-Q1Iscq9KRzqNmPicIWXNLcbYfWAbjW8DUs82bCqekMZ06fL7ha7mq-a4c1CGR5QGlkwIUEzB2LD1It8Fuehftb_KxtsFbkw3-KhGnzokd8cO_utiz0c3qSQd6_HLny7Flm-E_dWelXolmeyd_NEZUE1B7EkESZlEPYyjQnmmp1Q55LQWOcbQeZP3b6GF363pHWTE3Xg85j4FKOKfOsHM9qFvUtzEPHQwU8QehtPsX0qVJ5IU63jEsV0"/>
+</div>
+<div class="relative z-10">
+<span class="bg-primary text-white text-[10px] font-headline font-bold uppercase tracking-widest px-2 py-1 rounded-sm">Signature Series</span>
+<h3 class="text-2xl font-headline font-black mt-4">KINETIC STRIKE V2</h3>
+<p class="text-sm text-on-surface-variant mt-2 mb-6 max-w-[200px]">Custom engineered for high-rotation baseline play and maximum frame stability.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 bg-surface-container-lowest p-3 rounded-lg">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<p class="text-xs font-label uppercase text-outline">Strings</p>
+<p class="text-sm font-bold">Poly-Pulse 125</p>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-3 rounded-lg">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<p class="text-xs font-label uppercase text-outline">Shoes</p>
+<p class="text-sm font-bold">AeroGlide Pro Court</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 py-4 bg-gradient-to-r from-primary to-primary-container text-white font-headline font-bold italic tracking-tight rounded-md shadow-lg shadow-primary/30 active:scale-95 transition-transform">
+                                SHOP THE LOOK
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Articles (Asymmetric Layout) -->
+<section class="mb-16">
+<h2 class="text-3xl font-headline font-black italic tracking-tight mb-8">IN THE HEADLINES</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature Article -->
+<div class="md:col-span-2 group cursor-pointer">
+<div class="aspect-video rounded-xl overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="atmospheric shot of a tennis court at night under bright stadium floodlights, lens flare, moody sports photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATJzZxiLDf4BKKCKgDC13XWjr7gcKysIVrHsUXNZhpcnrc1Vx6kushky-fMVXraJo9BePcAs49721fheVp9GVnyZwplnnf2ZR54hyvp6qs_4b7TfSbJEgkw6xhrWvlAxRRxruVtKhNFwSFH6AsUUL0d8MDulinKd8K3rnSPhA5AE0Ppl1KoBiFdwuw-ppwrUWo_H9Ud_HyKMf2gqRvE0CWstHTsce-Mc_QhH4jrdso-WE-H9FYnOg1RbdaqvtU9C1AIvTJgCbRvgw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-sm text-xs font-headline font-bold uppercase mb-2 inline-block">Deep Dive</span>
+<h3 class="text-3xl font-headline font-black text-white italic leading-tight">THE ANATOMY OF A <br/>REYNOLDS SERVE</h3>
+</div>
+</div>
+</div>
+<!-- Column Articles -->
+<div class="flex flex-col gap-8">
+<div class="group cursor-pointer">
+<p class="text-xs font-label uppercase tracking-widest text-primary font-bold mb-2">Editorial • 2 days ago</p>
+<h4 class="text-xl font-headline font-bold leading-tight group-hover:text-primary transition-colors">Why Marcus Reynolds is the favorite for the upcoming US Open season.</h4>
+<div class="h-1 w-0 group-hover:w-full bg-primary mt-4 transition-all duration-500"></div>
+</div>
+<div class="group cursor-pointer">
+<p class="text-xs font-label uppercase tracking-widest text-primary font-bold mb-2">Interview • 1 week ago</p>
+<h4 class="text-xl font-headline font-bold leading-tight group-hover:text-primary transition-colors">Mental Fortitude: Marcus on handling the pressure of the big stages.</h4>
+<div class="h-1 w-0 group-hover:w-full bg-primary mt-4 transition-all duration-500"></div>
+</div>
+<div class="group cursor-pointer">
+<p class="text-xs font-label uppercase tracking-widest text-primary font-bold mb-2">News • 10 days ago</p>
+<h4 class="text-xl font-headline font-bold leading-tight group-hover:text-primary transition-colors">Training Camp Leak: A look inside Reynolds' grueling off-season routine.</h4>
+<div class="h-1 w-0 group-hover:w-full bg-primary mt-4 transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 w-full mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-8 py-12 max-w-[1440px] mx-auto">
+<div class="md:col-span-1">
+<div class="text-lg font-black text-slate-900 dark:text-white mb-4">SportVerse</div>
+<p class="text-xs text-slate-500 leading-relaxed">The digital stadium for high-octane sports performance tracking and editorial insights.</p>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-xs font-bold uppercase tracking-widest mb-2">Platform</p>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Stadium Rules</a>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Tournament Hub</a>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Live Scoring</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-xs font-bold uppercase tracking-widest mb-2">Legal</p>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<p class="text-xs font-bold uppercase tracking-widest mb-2">Support</p>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Help Center</a>
+<a class="text-xs text-slate-500 hover:text-slate-900 dark:hover:text-white transition-colors" href="#">Media Kit</a>
+</div>
+</div>
+<div class="max-w-[1440px] mx-auto px-8 py-6 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<p class="text-xs text-slate-500">© 2024 SportVerse Kinetic Stadium. All Rights Reserved.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400">sports_tennis</span>
+<span class="material-symbols-outlined text-slate-400">sports_cricket</span>
+<span class="material-symbols-outlined text-slate-400">sports_esports</span>
+</div>
+</div>
+</footer>
+</body></html>
